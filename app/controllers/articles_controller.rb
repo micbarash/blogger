@@ -7,6 +7,8 @@ class ArticlesController < ApplicationController
 
 	def show #Displays an individiaul article
 		@article = Article.find(params[:id])
+		@comment = Comment.new
+		@comment.article_id = @article_id 
 	end
 
 	def new #Opens the 'submit new article' form
